@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-RPG: AI-Powered Text-Based Adventure</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #2e2e2e;
+            color: #00ff00;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        .jumbotron {
+            background-color: #222;
+            border: 5px solid #00ff00;
+            padding: 2rem;
+        }
+
+        .btn {
+            background-color: #00ff00;
+            color: #222;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.5rem;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 5px #00cc00;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .btn:active {
+            transform: translateY(5px);
+            box-shadow: none;
+        }
+
+        .btn:hover {
+            background-color: #00cc00;
+        }
+
+        .key-features {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .key-features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .key-features li {
+            margin-bottom: 1rem;
+        }
+
+        .key-features li::before {
+            content: "▶";
+            margin-right: 0.5rem;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* Additional CSS for email form */
+        .contact__form {
+            margin-top: 2rem;
+        }
+
+        .contact__form-field {
+            margin-bottom: 1rem;
+        }
+
+        .contact__form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact__form-input {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #222;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+        }
+
+        .contact__form-input:focus {
+            outline: none;
+            border-color: #00cc00;
+        }
+
+        .contact__btn {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>GPT-RPG</h1>
+            <h4>The Ultimate AI-Powered Text-Based Adventure!</h4>
+        </div>
+
+        <p>Embark on a thrilling journey with GPT-RPG, the groundbreaking text-based adventure game that uses AI to generate a unique and immersive experience every time you play. Dive into a world of endless possibilities, where your choices shape the story and the AI crafts a captivating narrative just for you.</p>
+
+        <h3>Key Features:</h3>
+        <div class="key-features">
+            <ul>
+                <li>AI-Driven Storytelling: GPT-RPG harnesses the power of AI to create a rich, dynamic, and ever-changing world. Experience a new adventure every time you play, with AI-generated characters, quests, and plot twists that adapt to your choices.</li>
+                <li>Infinite Replayability: With countless storylines and scenarios, GPT-RPG offers endless hours of entertainment. Whether you're a casual gamer or a dedicated role-player, you'll never run out of new adventures to explore.</li>
+                <li>Immersive Text-Based Gameplay: GPT-RPG brings the classic text-based adventure format into the modern era. Engage your imagination and immerse yourself in a world brought to life by vivid descriptions, engaging dialogue, and compelling choices.</li>
+                <li>Interactive Decision-Making: Your choices matter! GPT-RPG puts you in control, allowing you to make meaningful decisions that impact the story's outcome. Will you be a valiant hero, a cunning rogue, or a wise diplomat? The choice is yours.</li>
+                <li>Genre-Defying Adventures: Explore a vast array of settings and themes, from high fantasy and sci-fi to mystery and historical fiction. GPT-RPG's AI-driven storytelling ensures that no two adventures are the same, providing a fresh and exciting experience every time.</li>
+            </ul>
+        </div>
+
+        <p>Get ready to embark on an unforgettable adventure with GPT-RPG! Download now and let the AI transport you to a world of endless possibilities, where every choice you make shapes the story and creates a one-of-a-kind experience tailored just for you. Unleash your imagination and become the hero of your own AI-generated adventure today!</p>
+
+        <div class="text-center">
+            <a href="#" class="btn btn-lg">Download</a>
+        </div>
+        <br/>
+        <br/>
+        <p class="note">Note: A reliable internet connection is required to play GPT-RPG</p>
+
+    <h4>Questions? Comments? Get in Touch!</h4>
+    <form onsubmit="sendEmail(event)" class="contact__form" id="contact-form">
+      <div class="contact__form-field">
+        <label class="contact__form-label" for="name">Name</label>
+        <input
+          required
+          placeholder="Enter Your Name"
+          type="text"
+          class="contact__form-input"
+          name="name"
+          id="name"
+        />
+      </div>
+      <div class="contact__form-field">
+        <label class="contact__form-label" for="email">Email</label>
+        <input
+          required
+          placeholder="Enter Your Email"
+          type="text"
+          class="contact__form-input"
+          name="email"
+          id="email"
+        />
+      </div>
+      <div class="contact__form-field">
+        <label class="contact__form-label" for="message">Message</label>
+        <textarea
+          required
+          cols="30"
+          rows="10"
+          class="contact__form-input"
+          placeholder="Enter Your Message"
+          name="message"
+          id="message"
+        ></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn--theme contact__btn">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("LDKqItcOdzGy0MTzd");
+      })();
+    </script>
+    <script type="text/javascript">
+      async function sendEmail(event) {
+        event.preventDefault();
+
+        const form = document.getElementById("contact-form");
+
+        const templateParams = {
+          user_name: form.name.value,
+          user_email: form.email.value,
+          message: form.message.value,
+        };
+        console.log(templateParams)
+        try {
+          const response = await emailjs.send("service_glh43la", "template_hpqlutn", templateParams);
+          console.log("Email sent successfully!", response);
+          form.reset();
+          alert("Email sent successfully!");
+        } catch (error) {
+          console.error("Error sending email:", error);
+          alert("Error sending email. Please try again.");
+        }
+      }
+    </script>
+</body>
+</html>
